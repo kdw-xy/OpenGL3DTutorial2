@@ -17,6 +17,7 @@ class Scene
 public:
 	Scene(const char* name);
 	Scene(const Scene&) = delete;
+	Scene& operator=(const Scene&) = delete;
 	virtual ~Scene();
 
 	virtual bool Initialize()=0{}
@@ -35,7 +36,7 @@ public:
 	bool IsVisible() const;
 
 private:
-	std::string nmae;
+	std::string name;
 	bool isVisible = true;
 	bool isActive = true;
 };
